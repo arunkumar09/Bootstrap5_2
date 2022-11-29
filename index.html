@@ -372,6 +372,57 @@
     </section>
 
     <!-- contact form -->
+    <!-- form-control, form-label, form-select, input-group, input-group-text -->
+    <section id="contact">
+        <div class="container-l">
+            <div class="text-center">
+                <h2>Get in Touch</h2>
+                <p class="lead">Questions to ask? Fill out the form to contact me directly...</p>
+            </div>
+
+            <div class="row justify-content-center my-5">
+                <div class="col-lg-6">
+                    <form>
+                        <label for="email" class="form-label">Email Adress:</label>
+                        <div class="mb-4 input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-envelope-fill"></i>
+                            </span>
+                        </div>
+                        <input type="email" class="form-control" id="email" placeholder="e.g. mario@example.com">
+
+                        <label for="name" class="form-label">Name:</label>
+                        <div class="mb-4 input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-person-fill"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" id="name" placeholder="e.g. Mario">
+
+                        <label for="subject" class="form-label">WHat is your question about?</label>
+                        <div class="mb-4 input-group">
+                            <span class="input-group-text">
+                                <i class="bi bi-chat-right-dots-fill"></i>
+                            </span>
+                        </div>
+                        <select name="subject" id="subject">
+                            <option value="pricing" selected>Pricing Query</option>
+                            <option value="content">Content Query</option>
+                            <option value="other">Other Query</option>
+                        </select>
+                        <div class="form-floating mb-4 mt-5">
+                            <label for="query" class="form-label">Your query...</label>
+                            <textarea name="query" id="query" class="form-control" style="height:140px"></textarea>
+                        </div>
+
+                        <div class="mb-4 text-center">
+                            <button type="submit"    class="btn btn-secondary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- get updates/modal triggers -->
 
