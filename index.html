@@ -93,11 +93,14 @@
             <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
           </div>
           <div class="col-md-5 text-center d-none d-md-block">
-            <img
+            <!-- tooltip -->
+            <span class="tt" data-bs-placement="bottom" title="Net Ninja Book Cover">
+                <img
               src="/assets/ebook-cover.png"
               alt="ebook cover"
               class="img-fluid"
             />
+            </span>
           </div>
         </div>
       </div>
@@ -384,32 +387,45 @@
                 <div class="col-lg-6">
                     <form>
                         <label for="email" class="form-label">Email Adress:</label>
-                        <div class="mb-4 input-group">
+                    <div class="mb-4 input-group">
                             <span class="input-group-text">
                                 <i class="bi bi-envelope-fill"></i>
                             </span>
-                        </div>
+                        
                         <input type="email" class="form-control" id="email" placeholder="e.g. mario@example.com">
-
+                        <!-- tooltip -->
+                        <span class="input-group-text">
+                            <span class="tt" data-bs-placement="bottom" title="Enter an Email address we can reply to.">
+                                <i class="bi-bi-question-circle text-muted"></i>
+                            </span>
+                        </span>
+                    </div>
                         <label for="name" class="form-label">Name:</label>
-                        <div class="mb-4 input-group">
+                    <div class="mb-4 input-group">
                             <span class="input-group-text">
                                 <i class="bi bi-person-fill"></i>
                             </span>
-                        </div>
+                        
                         <input type="text" class="form-control" id="name" placeholder="e.g. Mario">
-
-                        <label for="subject" class="form-label">WHat is your question about?</label>
+                        <!-- tooltip -->
+                        <span class="input-group-text">
+                            <span class="tt" data-bs-placement="bottom" title="Pretty self explanatory.">
+                                <i class="bi-bi-question-circle text-muted"></i>
+                            </span>
+                        </span>
+                    </div>
+                        <label for="subject" class="form-label">What is your question about?</label>
                         <div class="mb-4 input-group">
                             <span class="input-group-text">
                                 <i class="bi bi-chat-right-dots-fill"></i>
                             </span>
-                        </div>
+                        
                         <select name="subject" id="subject">
                             <option value="pricing" selected>Pricing Query</option>
                             <option value="content">Content Query</option>
                             <option value="other">Other Query</option>
                         </select>
+                    </div>
                         <div class="form-floating mb-4 mt-5">
                             <label for="query" class="form-label">Your query...</label>
                             <textarea name="query" id="query" class="form-control" style="height:140px"></textarea>
@@ -426,11 +442,18 @@
 
     <!-- get updates/modal triggers -->
 
+    
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <script>
+        const tooltips = document.querySelectorAll('.tt')
+        tooltips.forEach(t=> {
+            new bootstrap.Tooltip(t)
+        })
+    </script>
   </body>
 </html>
